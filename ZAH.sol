@@ -1,3 +1,96 @@
+/*
+
+                                                                     .,:ii7r7;i:,.                                                                    
+                                                            :7u0O@B@B@B@B@B@B@B@B@B@B@ONu7:                                                           
+                                                     i2O@B@B@B@B@B@B@B@B@MBMBB@B@B@B@B@B@@@B@B@O2:                                                    
+                                                :kB@B@B@B@B@8kLr:,.    . .....     ..,:rLSO@B@B@B@B@B5:                                               
+                                            iN@B@B@@@BP7:.  .:rLS0MB@B@B@B@@@B@B@B@BMESLr:.  .:vPB@B@B@@@Xi                                           
+                                        .UB@B@@@@0r.  ,72O@@@@B@B@B@@@B@@@B2S@B@B@B@B@B@B@B@BOUr,  ,7EB@B@B@@u                                        
+                                     .SB@B@B@q;  .7k@B@B@B@@@@@@@B@B@B@B@B@  B@B@B@B@B@@@@@B@@@B@B@k7.  rN@B@B@@F.                                    
+                                   UB@B@B@L. .78B@B@@@B@B@B@B@B@B@B@B@B@B@    @@@@@@B@B@@@B@B@B@B@B@B@@Gr. .u@B@@@Bu                                  
+                                iB@@@B@v. :5@B@B@B@B@B@B@B@B@@@@@B@ZXqSjL      vUF0FO@@B@B@B@B@B@B@B@B@B@B@2: .L@@@B@Mi                               
+                              j@B@B@1. :k@B@B@B@B@@@@@B@@@B@@@B@B@BX                q@B@@@@@B@B@B@B@B@B@@@B@B@F, .F@B@B@Y                             
+                            X@@B@@i .u@B@B@B@B@B@B@@@B@B@B@@@B@B@B@B@5            q@@B@@@B@B@B@B@B@B@B@B@B@@@@@@@u  ;B@B@Bk                           
+                          q@@@B8. :BB@B@B@O@B@B@@@B@@@@@B@@@B@B@B@B@@@@i        r@B@B@B@B@B@@@B@B@@@@@B@BMB@B@B@B@@M: .M@@B@k                         
+                        SB@@@q  vB@B@B@B@B. JB@0:v@B@B@B@B@B@B@B@B@B@B@.        :B@@@B@B@B@B@B@B@BU,NB@u  @B@@@B@B@B@B7  Z@B@@1                       
+                      v@B@BG  u@B@B@B@B@B@J      @B@B@B@B@B@B@B@B@B@B@B    Jv    @B@B@B@B@B@B@B@B@B      7@@B@B@B@B@B@@@L  OB@B@r                     
+                    ,B@B@B  u@@B@B@B@B@B@v      :B@B@B@B@B@B@@@B@B@B@BY J@@B@@@v U@B@@@B@@@B@@@B@@@i      vM@B@B@B@B@B@@@BL .B@B@B.                   
+                   XB@B@: i@B@@@B@@@B@@q          O@B@B@B@B@B@B@B@B@B@B@B@@@B@B@B@B@B@B@B@B@B@B@BB          5@B@@@B@B@B@B@B@: i@@@BF                  
+                 .@@@Bq  B@B@B@@@B@B@B@B@B@:   7r.L@@B@B@B@B@B@B@B@B@B@B@MMOMM@B@B@B@B@B@B@B@B@B@L,iv   .B@B@B@B@B@B@B@B@B@B@B  8B@B@.                
+                J@B@B. SB@@@B@B@B@B@B@B@B@B@  @@B@@@B@B@B@B@B@MXvi,.     . . .     .:rjGB@B@B@B@B@B@B@  B@B@B@@@B@B@B@@@@@B@B@B2 :B@B@v               
+               M@@@M  @B@B@B@B@B@@@B@B@B@B@BqB@B@B@@@B@B@MU:.  .ivkZB@@B@B@B@B@B@BMqUr:   ,70B@B@B@B@B@k@B@B@B@B@B@@@B@B@@@B@B@B@  @@B@8              
+              @@B@v Y@B@B@B@B@B@B@B@B@B@B@B@B@B@B@B@B@u:  ,LE@@@B@B@B@@@@@B@B@@@B@B@B@@@@B1i   r8@@@B@B@B@@@@@B@B@B@B@B@B@B@B@@@B@7 u@B@@             
+            ,B@B@. M@B@B@B@B@B@B@B@B@@@B@B@B@B@B@B@L. .LMB@B@B@B@B@B@@@B@B@B@B@B@B@B@B@B@B@B@@X:  iE@B@B@@@B@B@B@B@B@B@@@B@B@B@B@B@O :@B@B.           
+           :B@B@  B@B@B@B@B@B@B@@@@@B@B@B@B@B@B@X. .1@B@B@B@B@B@B@B@B@B@B@B@B@B@B@B@@@B@B@B@B@B@BMr  7@@B@B@@@B@B@B@B@B@B@B@B@B@@@@@B  @B@B,          
+          iB@B@  B@@@B@B@B@B@B@B@B@B@B@B@B@B@BL  L@B@B@B@B@B@B@B@B@@MZq2UJjLjJ1F0GB@@@@B@B@B@B@B@B@BZ, .MB@B@B@B@@@B@@@B@B@B@B@@@B@@@B  @B@B:         
+         :B@B@ ,B@B@B@B@B@B@B@B@B@B@B@B@B@B@r  EB@B@@@B@B@B@B@857i,.       .       .,iLkM@B@@@B@B@B@B@Br  G@@@B@B@B@B@B@B@B@B@B@B@@@B@B  @B@@,        
+        .B@B@ ,B@B@B@B@@@B@@@B@B@B@B@B@B@BY  O@B@B@B@B@@@@8L:.. ..,,. .:Y7,::Yv,. ..,.. ..iuBB@@@B@B@B@@@7  @B@B@B@B@B@B@B@B@B@B@B@B@B@B  @B@B        
+        B@B@  B@B@@@B@B@B@B@B@B@B@B@B@B@O  ZB@B@B@B@B@BZr.   ,::::..iqB@BB.:,@B@B1: .::::.   ,vMB@@@B@B@B@Bi ;@@B@@@@@B@@@B@B@B@B@B@B@@@B  @@@B       
+       B@B@. B@B@B@@@B@B@B@B@B@B@B@B@B@: 7@@@B@B@B@B@L.   ,v@X::, rM@B@B@E.,.B@B@@@0: :::BM;.   :1@B@B@B@B@B@  M@B@B@B@@@B@B@B@B@@@B@B@B@B ,@B@B      
+      X@B@v B@B@B@B@B@B@B@B@B@B@B@B@B@  B@@@B@B@B@Mr   .r8B@B:,.,OB@B@B@@Z :.@B@B@B@@F..,rB@@P:   .J@@B@B@B@B@v 7@B@B@@@B@B@@@B@B@B@B@@@B@B U@B@U     
+     :@B@B O@B@B@B@B@B@B@B@B@B@@@B@BE i@@B@B@B@@@r   .2B@B@1 . r@@@B@B@B@0.,.@@B@B@@@B@,...M@B@Mv   .J@B@B@B@B@M  @B@B@@@B@@@@@B@B@B@B@@@B@0 B@B@.    
+     @B@B i@B@@@@@B@B@B@B@B@B@@@B@BU SB@B@B@B@Bu   ,1@B@@@u . Y@B@B@B@B@BE ,.@B@@@B@@@B@:...O@B@B@v.  .E@@B@B@B@B  @B@@@B@B@B@BOB@B@B@B@B@B@: @@B@    
+    FB@Br @@@B@B@B@,7B@B@@@B@B@@@@Y MB@@@B@B@M: . uB@@@B@F . J@B@B@B@B@B@0.,.B@B@B@B@B@@@:...B@B@B@B7 . 7B@B@B@B@B  @B@@@B@B@B@2 B@B@B@B@B@B@ L@@@J   
+    B@B@ MB@B@B@B@O M@@JB@B@B@B@@1 BB@B@B@B@k..,r@B@@@B@M ..7@B@B@B@B@@@BE ,.@B@@@@@B@@@B@,..,B@B@B@B@:, ,M@B@B@B@B. @B@B@B@XNB@  B@@@B@B@B@B0 @B@@   
+   0@B@. B@@@B@B@B  @S Y@@@B@B@BO OB@@@B@B@L .:.LM@B@B@B,..:@@@@@B@B@B@B@N.,.B@B@B@B@B@B@B@., vB@B@@@Oi,,. 0@B@B@B@B  @B@B@BB  B@ :@@B@B@@@@@B ,@B@1  
+   @@@B B@B@B@B@@: 7i  @B@B@B@B@ jB@B@B@B@7 .,:.   iuMBU :,@B@B@B@B@B@B@BG :.@B@B@B@B@B@@@BO.: MBEv:   .:.. P@B@B@B@B r@B@B@@@  v  7B@B@B@B@B@O B@B@  
+  uB@B: @B@B@B@@B     @B@B@B@B@  B@B@B@B@L . G@8L,    ,,:,7B@@@B@B@B@B@@@O.,,B@@@B@B@B@B@B@B:::,.   .:UB@Y . Z@@@B@@@M M@B@B@B@     MB@B@B@@@B@ iB@@v 
+  B@B@ qB@B@B@B@:    @B@B@B@B@5 B@B@B@B@S . X@B@B@BP7i,::,   ,:rv2S0GMB@B0.:,@B@MMZEFu7r:.  .:::,rLZB@B@B@7 ..B@B@B@B@: B@B@@@B@    .@B@B@B@B@BU @B@B 
+  @B@k @@B@B@B@B.   @@@B@B@B@B v@B@B@B@B.. Y@B@B@@@B@B::,i7:.            .:::.            .:v::.7B@B@B@B@B@:..:B@B@@@B@ 2B@B@B@B@r   B@@@B@@@B@B Z@B@ 
+ 7B@B. @B@B@B@B@7  @B@B@B@B@@2 @B@@@B@Bi .:@B@B@B@B@B0 :.@B@@@OEFuv7ii::::::,::::ii7L2SZM@B@B0 :.@B@B@B@B@B@ , UB@B@B@Bv @B@B@B@B@k  @7M@@B@B@B@ :B@B.
+ Z@B@ 5B@B@B@B u@ 7M@B@B@@@B@ r@@@@B@BP . M@@B@B@B@@@:  iB@B@B@B@B@B@B@B@E ..B@@@B@B@B@B@B@B@B.. U@B@B@B@B@Bu . @B@@@B@B E@B@B@@@MJi@B S@B@@@@@BY @B@L
+ @B@B B@B@B@B@  B@: B@@@B@B@@ B@B@@@B@,  iB@B@B@B@@@B.  j@B@@@B@B@B@B@B@B0 . @B@@@B@B@B@B@B@B@:  iB@B@B@B@B@B.. 7@B@B@B@ .B@B@B@B@ vB@ 7@@B@B@@@B B@BN
+,B@Bk @B@B@@@B  @M  @B@@@B@BL @B@@@B@B@B@B@@@@@B@@@B@B@B@@@B@B@B@B@B@@@B@B@B@@@B@B@B@B@B@B@B@B@@@B@B@B@B@B@B@B@@@@@@@B@BF @B@B@B@@  LP  @B@B@B@@@ GB@O
+L@B@r B@B@B@B@  ,   B@@@B@B@ .B@B@B@B@@@B@B@B@B@B@B@B@B@@@B@B@B@B@B@B@B@@@B@B@B@B@B@B@B@B@B@B@B@@@B@B@B@B@B@B@B@B@B@B@@@B B@B@B@B@i     B@B@B@@@B L@B@
+EB@B: @B@B@B@@     L@B@@@B@B 7@B@B@@@B@@@MUXq0ZEZ0Z0GZGEE2OPiG@@@OMX1u1U22121211EMPB@B@N121UM,7B@@@B@1FuF2O.uB@B@B@B@B@B@ qB@B@B@B@     @B@B@@@B@ iB@B
+B@@@..B@B@B@B@:    @@@B@B@B@ FB@B@B@B@@@BOP              .B  5B@50.              iE L@BqM   B  @B@B@B1O   B  @B@@@B@B@B@B J@B@B@B@B0    @@B@B@B@B ,@B@
+@B@@ .@B@B@B@B@   vB@B@B@B@B k@@@B@B@B@@@81: .....,ir   7M  BB@uM    Y7::,:,:,v   7B L@E@   @. B@B@B@kM   @  B@B@B@B@B@B@ LB@B@B@B@B.  2@B@B@B@B@ ,B@B
+B@@@..B@B@B@B@BB  F@B@@@B@B@ FB@B@B@B@B@@@E5rvvLJY1@i  8q  @B@BuN   BJ 1F51511BJ   @  @MB   B  @B@B@BE@   B  @B@B@B@B@@@B J@B@B@B@B07 ;@OMB@B@B@B ,@B@
+ZB@B, @B@B@B@O.B@70 2B@B@@@B v@B@B@@@B@B@B@B@B@B@@G   @r i@@@B@2Z   @. B@@@B@BM0   B  @M@   @qrB@B@B@M@   @  B@B@@@B@B@B@ PB@B@B@BY @B@v B@B@B@B@ iB@B
+Y@@@r B@@@@@B@  B@B  @B@B@@@ ,@@B@@@@@B@@@B@@@B@Bv  .@  S@@@B@B1E   U2Lvrrrrr72i   @  BMB                 @  @B@B@B@@@B@B B@B@@@B@  i@F .@@@B@B@B L@B@
+:B@BS @@@@@B@@@  Bu  Z@B@B@B7 @B@B@@@B@B@@@B@@M8.  iB  B@B@B@B@2G                  B  @M@                 @  B@@@B@B@B@BX @B@B@B@B   O  0B@B@B@B@ ZB@O
+ @B@B @@B@@@@@B,     LB@B@B@B B@B@B@B@B@B@B@BMS   8@::B@B@B8B@BFE   SPU7;;iiirSi   @  BBB   B0iL77r77UB   B  @@@B@B@@@B@. @@B@B@@@      B@B@@@B@B B@BE
+ G@B@ kB@B@B@B@@     v@B@B@B@ 7B@B@B@B@@@@@8Zi    r,::.   .E L@50   @: USUUu2JMX   B  @MB   @  B@B@B@F@   @  B@B@B@@@B@B X@B@B@B@@,    .@B@B@@@Bj @B@Y
+ LB@B .@@@B@B@B@7    UB@B@@@BJ @B@B@@@B@B@58:              @ :BUE   B  @B@B@B@qu   @  @OM   B. @B@B@BXO   B  @B@B@B@B@@u @@@B@B@B@u    @B@B@B@@@ .B@B,
+  @@@1 B@B@B@@@B@7   :@E@B@B@B u@@@B@B@@@ML7,ir7777r7r7r7rr, r@u5iiiJ  B@B@B@BJuii;7  @M17r;u  B@B@B@X5rrrj  @@B@B@B@B@ YB@B@@@@8Bv   BB@@@@@B@@ 0@B@ 
+  @@B@ EB@@@B@@@B@B:  X L@B@B@u @@B@B@B@B@B@MBM@MBB@BBM@BBMMB@B@BZX0SZO@@@B@B@B@NNPkZBB@@MP0XGM@B@B@B@BMNZX8B@B@@@B@B@7 B@B@B@B@ L, v@@@B@B@B@@F @B@B 
+  5B@B, @B@B@B@@@EMB@B@  L@B@B@ ,B@B@B@B@B@B@B@B@B@B@B@B@B@@@B@B@B@B@B@B@B@@@B@B@B@B@B@B@B@B@B@B@B@B@B@B@@@B@B@B@B@B@@ Z@B@B@B@  r@B@L.@@B@B@B@ :B@@L 
+   @B@B B@B@@@@@@O  r@B   M@B@B@ SB@@@B@B@kPGOOOZN51SMBGq8E@B@@@B@@@B@B@@@PZq@B@@@B@@@B@B@B@08SMBG2U50GOOOZFG@B@B@B@B :@@@B@B@v  rB5  X@B@B@B@M B@B@  
+   G@B@  B@@@B@@@@@   1,   B@B@Bq BB@B@B@BX   .   iu8B@5   u@B@B@B@B@B@B@F   @@B@@@B@@@B@B@:   M@M0v:       MB@@@B@B  @B@B@B@B   ::  P@B@B@B@B .@B@k  
+    B@B@ BB@B@B@B@@@.      @B@B@BL @B@@@B@B@. ,.u@@@B@B@7 . M@B@B@B@B@B@B0 ..@B@B@B@B@B@B@U . q@B@B@B@i,. i@B@B@B@@: @B@B@B@B@      ;@B@B@@@@O @B@B   
+    qB@B: @B@B@B@B@B@.     7@B@B@Br @B@B@B@B@r .,Y@@@B@B@:...B@@@B@@@B@B@0.,.B@B@B@B@B@B@0 . L@@@B@B@;,..u@B@@@B@B: @B@B@B@B@@      @B@B@@@B@ rB@B1   
+     @B@B 7@B@B@B@@@B@7     1@B@@@@v 8B@@@B@B@S.  .SB@B@B@...,@@@@B@B@@@BE ,.@B@B@B@B@B@Z . i@@@B@BL   :M@B@B@B@@  @B@B@@@B@B:    ,@B@B@B@B@i @@B@    
+     :@B@8 B@B@B@B@B@@@@7    @@B@B@BF vB@@@B@B@B7   ,S@B@B@...,M@B@B@B@B@0.,.B@B@B@B@B@S . i@B@B@L.  .2B@B@B@B@B  @B@B@@@B@BL   .N@B@B@B@B@O B@@@,    
+      G@@@r @@B@B@B@@@@@B@B@B@@@B@B@BB  @@B@B@B@BBi   .jB@B@:...S@B@B@@@BZ ,.@B@B@B@B@v ,.L@B@O7   .v@B@B@@@B@U i@@@B@B@B@@@BB8@B@B@B@B@B@B v@B@X     
+       B@B@  B@B@@@B@B@B@B@B@B@@@B@B@B@. 2@B@B@B@B@O7    :PB@u:, i@B@B@@@E.,.B@B@B@BG,.,,G@BU,   .jB@B@@@B@B@  E@B@B@B@B@B@B@B@B@B@B@B@B@@ .@B@B      
+        B@B@ ,B@B@B@B@B@B@B@B@B@B@@@B@B@P  BB@B@B@B@B@u:   .rL:i:. 7M@B@BM.:.@B@@@0i ,:::u:    ik@B@B@B@@@B7 :B@B@B@B@@@@@B@B@@@B@B@B@B@B  @B@B       
+        :B@B@ iB@B@B@B@B@B@B@B@B@B@@@B@@@@r ,B@B@B@B@B@BMJ:   ,::::..:u8@E.::B@qv, .:::,.  .i5@B@B@B@B@B@j  MB@B@B@B@@@B@B@B@B@B@B@B@B@@, @@@B.       
+         iB@B@ :B@B@@@B@B@@@B@B@B@B@B@@@@@B@: ,MB@B@B@B@B@B@qL:... ..   .,,:..    .. ..:iuZ@B@B@B@B@B@BY  X@@@B@B@B@B@B@B@B@B@B@B@@@B@B, @B@B:        
+          7B@@@ ,B@B@B@B@B@B@B@B@B@B@@@@@B@B@B;  2@B@B@B@@@@@B@@Bq27i:,...... ..::rvFE@B@B@B@B@B@B@BB:  NB@B@B@@@B@B@B@B@B@B@B@@@B@B@B. @B@Bi         
+           rB@B@  B@B@B@@@B@B@B@@@B@B@B@B@B@B@B@U  :N@B@B@@@B@B@B@B@B@B@B@B@B@B@B@B@B@B@B@B@B@@@B@L  iM@B@B@B@B@B@B@@@B@B@B@@@@@B@@@B  @B@B:          
+            :B@B@  B@B@@@B@B@B@B@B@B@B@B@B@@@B@B@B@r  :2@B@B@B@B@B@B@B@B@B@B@@@@@@@B@B@B@B@B@B8r. :S@B@B@B@B@B@@@B@B@B@B@B@B@@@B@B@B .@B@B,           
+             .B@B@; 5@@@@@B@B@B@B@B@B@B@@@B@B@B@B@B@BBL.  :UO@B@B@B@@@B@@@B@B@B@B@B@B@B@B@qv.  iX@B@B@B@B@B@B@B@B@B@@@B@B@@@B@B@B@j 7@B@B             
+               B@B@0 .@B@B@B@@@B@B@B@B@B@B@B@B@B@B@B@B@B@ZL,  .:7UZM@@@B@B@B@B@B@B@OPYi.  .iFB@B@B@B@B@@@B@B@B@B@B@B@@@B@@@@@B@B@. O@B@B              
+                F@B@B  EB@B@B@B@B@B@B@B@@@. G@B@LUB@@@B@@@B@B@ZUr:.    .......     .,ivXM@B@B@B@@@O@B@B@2rB@B@B@B@B@B@B@B@B@B@@P .B@@@u               
+                 :@@@B1 ,B@B@@@B@B@B@@@B@BL      Z@B@B@B@B@@@B@@@B@B@@@MOEGZOGMM@B@@@B@B@B@B@B@@@B5  7u  .@B@B@B@@@@@B@B@@@B@B. XB@B@,                
+                   8B@B@. v@B@B@B@B@B@@@B8      :@B@B@B@B@B@B@B@B@@@B@B@B@B@B@@@B@@@B@B@B@B@B@B@@@@.     :B@B@B@B@B@B@B@B@B@r :@@@@0                  
+                    :B@B@O  FB@B@B@B@B@P         :@B@B@@@B@B@B@B@B@B@B@B@B@:iB@B@B@B@B@B@B@B@@@B@B@        ,OB@B@B@B@B@B@B2  M@B@B:                   
+                      u@B@Bk  F@B@B@@@B@MBG.   :  r@B@B@B@B@@@B@@@B@B@@@B@5  ZB@B@B@B@B@B@B@@@B@Bu       ,:r0@B@@@B@@@B@2  qB@B@Y                     
+                        GB@B@2  2B@B@B@B@B@B  @B@B@B@B@B@@@B@B@B@B@B@B@B@B    @B@B@@@@@B@B@B@B@B@8@B@X  1B@B@B@@@B@B@@j  F@B@BN                       
+                         .O@B@@X  r@B@B@@@B@7@B@B@B@B@B@B@B@B@B@@@Bk:i:,.      .,:::k@@@B@B@B@@@B@B@B@k @@B@B@B@B@B@i  0B@@@Z                         
+                            OB@B@M: ,X@B@B@B@B@B@B@B@B@B@@@B@B@B@@@O.              .MB@B@B@B@B@B@@@@@B@B@B@B@B@B@F. :M@@@BE                           
+                              F@B@B@L  iG@B@B@B@B@@@B@B@@@@@B@B@B@B@B@:          i@@B@B@B@B@B@B@B@B@B@B@B@B@B@E:  J@B@B@2                             
+                                vB@@@B@;  iq@B@B@B@B@B@B@@@@@B@B@B@B@B@r        JB@B@B@@@B@B@B@B@B@B@B@B@B@Pi  r@B@@@@r                               
+                                  .PB@@@BM7. ,LM@@B@B@B@B@@@B@B@B@B@B@B          @B@B@B@@@B@@@B@B@B@B@BML, .7BB@B@BS                                  
+                                     :Z@@B@B@1:  ,LZ@B@B@B@@@B@B@B@B@BO   rBMi   B@B@B@B@B@B@@@B@B@Ev,  :5@B@B@BE,                                    
+                                        ,P@@B@B@B1:. .:LPBB@B@@@B@@@B@UiB@B@@@BB:XB@B@B@B@B@BBXL:. .iFB@B@B@BS,                                       
+                                            vM@@@B@B@O2i,   :iL1ZO@B@B@B@B@B@B@B@B@B@O02Li,   ,i1M@B@B@B@O7                                           
+                                                rZB@B@B@B@BBXur:..   ......,......   ..:ruXBB@B@B@B@@0r                                               
+                                                    .7qB@B@B@B@B@B@B@BBOOEE0EZOOBB@B@B@B@B@B@B@BPr.                                                   
+                                                            .iv1XGOBB@B@B@@@B@B@B@BBOGX2vi.   
+
+*/
+
 //SPDX-License-Identifier: Unlicensed                    
 pragma solidity 0.8.9;
 
@@ -7,7 +100,6 @@ abstract contract Context {
     }
 
     function _msgData() internal view virtual returns (bytes calldata) {
-        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691
         return msg.data;
     }
 }
@@ -81,6 +173,20 @@ interface IUniswapV2Factory {
 
 interface IERC20 {
     /**
+     * @dev Emitted when `value` tokens are moved from one account (`from`) to
+     * another (`to`).
+     *
+     * Note that `value` may be zero.
+     */
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    /**
+     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
+     * a call to {approve}. `value` is the new allowance.
+     */
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+
+    /**
      * @dev Returns the amount of tokens in existence.
      */
     function totalSupply() external view returns (uint256);
@@ -91,13 +197,13 @@ interface IERC20 {
     function balanceOf(address account) external view returns (uint256);
 
     /**
-     * @dev Moves `amount` tokens from the caller's account to `recipient`.
+     * @dev Moves `amount` tokens from the caller's account to `to`.
      *
      * Returns a boolean value indicating whether the operation succeeded.
      *
      * Emits a {Transfer} event.
      */
-    function transfer(address recipient, uint256 amount) external returns (bool);
+    function transfer(address to, uint256 amount) external returns (bool);
 
     /**
      * @dev Returns the remaining number of tokens that `spender` will be
@@ -125,7 +231,7 @@ interface IERC20 {
     function approve(address spender, uint256 amount) external returns (bool);
 
     /**
-     * @dev Moves `amount` tokens from `sender` to `recipient` using the
+     * @dev Moves `amount` tokens from `from` to `to` using the
      * allowance mechanism. `amount` is then deducted from the caller's
      * allowance.
      *
@@ -134,24 +240,10 @@ interface IERC20 {
      * Emits a {Transfer} event.
      */
     function transferFrom(
-        address sender,
-        address recipient,
+        address from,
+        address to,
         uint256 amount
     ) external returns (bool);
-
-    /**
-     * @dev Emitted when `value` tokens are moved from one account (`from`) to
-     * another (`to`).
-     *
-     * Note that `value` may be zero.
-     */
-    event Transfer(address indexed from, address indexed to, uint256 value);
-
-    /**
-     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
-     * a call to {approve}. `value` is the new allowance.
-     */
-    event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
 interface IERC20Metadata is IERC20 {
@@ -173,8 +265,6 @@ interface IERC20Metadata is IERC20 {
 
 
 contract ERC20 is Context, IERC20, IERC20Metadata {
-    using SafeMath for uint256;
-
     mapping(address => uint256) private _balances;
 
     mapping(address => mapping(address => uint256)) private _allowances;
@@ -216,7 +306,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     /**
      * @dev Returns the number of decimals used to get its user representation.
      * For example, if `decimals` equals `2`, a balance of `505` tokens should
-     * be displayed to a user as `5,05` (`505 / 10 ** 2`).
+     * be displayed to a user as `5.05` (`505 / 10 ** 2`).
      *
      * Tokens usually opt for a value of 18, imitating the relationship between
      * Ether and Wei. This is the value {ERC20} uses, unless this function is
@@ -249,11 +339,12 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      *
      * Requirements:
      *
-     * - `recipient` cannot be the zero address.
+     * - `to` cannot be the zero address.
      * - the caller must have a balance of at least `amount`.
      */
-    function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
-        _transfer(_msgSender(), recipient, amount);
+    function transfer(address to, uint256 amount) public virtual override returns (bool) {
+        address owner = _msgSender();
+        _transfer(owner, to, amount);
         return true;
     }
 
@@ -267,12 +358,16 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     /**
      * @dev See {IERC20-approve}.
      *
+     * NOTE: If `amount` is the maximum `uint256`, the allowance is not updated on
+     * `transferFrom`. This is semantically equivalent to an infinite approval.
+     *
      * Requirements:
      *
      * - `spender` cannot be the zero address.
      */
     function approve(address spender, uint256 amount) public virtual override returns (bool) {
-        _approve(_msgSender(), spender, amount);
+        address owner = _msgSender();
+        _approve(owner, spender, amount);
         return true;
     }
 
@@ -282,20 +377,24 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      * Emits an {Approval} event indicating the updated allowance. This is not
      * required by the EIP. See the note at the beginning of {ERC20}.
      *
+     * NOTE: Does not update the allowance if the current allowance
+     * is the maximum `uint256`.
+     *
      * Requirements:
      *
-     * - `sender` and `recipient` cannot be the zero address.
-     * - `sender` must have a balance of at least `amount`.
-     * - the caller must have allowance for ``sender``'s tokens of at least
+     * - `from` and `to` cannot be the zero address.
+     * - `from` must have a balance of at least `amount`.
+     * - the caller must have allowance for ``from``'s tokens of at least
      * `amount`.
      */
     function transferFrom(
-        address sender,
-        address recipient,
+        address from,
+        address to,
         uint256 amount
     ) public virtual override returns (bool) {
-        _transfer(sender, recipient, amount);
-        _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance"));
+        address spender = _msgSender();
+        _spendAllowance(from, spender, amount);
+        _transfer(from, to, amount);
         return true;
     }
 
@@ -312,7 +411,8 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      * - `spender` cannot be the zero address.
      */
     function increaseAllowance(address spender, uint256 addedValue) public virtual returns (bool) {
-        _approve(_msgSender(), spender, _allowances[_msgSender()][spender].add(addedValue));
+        address owner = _msgSender();
+        _approve(owner, spender, allowance(owner, spender) + addedValue);
         return true;
     }
 
@@ -331,37 +431,52 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      * `subtractedValue`.
      */
     function decreaseAllowance(address spender, uint256 subtractedValue) public virtual returns (bool) {
-        _approve(_msgSender(), spender, _allowances[_msgSender()][spender].sub(subtractedValue, "ERC20: decreased allowance below zero"));
+        address owner = _msgSender();
+        uint256 currentAllowance = allowance(owner, spender);
+        require(currentAllowance >= subtractedValue, "ERC20: decreased allowance below zero");
+        unchecked {
+            _approve(owner, spender, currentAllowance - subtractedValue);
+        }
+
         return true;
     }
 
     /**
-     * @dev Moves tokens `amount` from `sender` to `recipient`.
+     * @dev Moves `amount` of tokens from `from` to `to`.
      *
-     * This is internal function is equivalent to {transfer}, and can be used to
+     * This internal function is equivalent to {transfer}, and can be used to
      * e.g. implement automatic token fees, slashing mechanisms, etc.
      *
      * Emits a {Transfer} event.
      *
      * Requirements:
      *
-     * - `sender` cannot be the zero address.
-     * - `recipient` cannot be the zero address.
-     * - `sender` must have a balance of at least `amount`.
+     * - `from` cannot be the zero address.
+     * - `to` cannot be the zero address.
+     * - `from` must have a balance of at least `amount`.
      */
     function _transfer(
-        address sender,
-        address recipient,
+        address from,
+        address to,
         uint256 amount
     ) internal virtual {
-        require(sender != address(0), "ERC20: transfer from the zero address");
-        require(recipient != address(0), "ERC20: transfer to the zero address");
+        require(from != address(0), "ERC20: transfer from the zero address");
+        require(to != address(0), "ERC20: transfer to the zero address");
 
-        _beforeTokenTransfer(sender, recipient, amount);
+        _beforeTokenTransfer(from, to, amount);
 
-        _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
-        _balances[recipient] = _balances[recipient].add(amount);
-        emit Transfer(sender, recipient, amount);
+        uint256 fromBalance = _balances[from];
+        require(fromBalance >= amount, "ERC20: transfer amount exceeds balance");
+        unchecked {
+            _balances[from] = fromBalance - amount;
+            // Overflow not possible: the sum of all balances is capped by totalSupply, and the sum is preserved by
+            // decrementing then incrementing.
+            _balances[to] += amount;
+        }
+
+        emit Transfer(from, to, amount);
+
+        _afterTokenTransfer(from, to, amount);
     }
 
     /** @dev Creates `amount` tokens and assigns them to `account`, increasing
@@ -378,9 +493,14 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
 
         _beforeTokenTransfer(address(0), account, amount);
 
-        _totalSupply = _totalSupply.add(amount);
-        _balances[account] = _balances[account].add(amount);
+        _totalSupply += amount;
+        unchecked {
+            // Overflow not possible: balance + amount is at most totalSupply + amount, which is checked above.
+            _balances[account] += amount;
+        }
         emit Transfer(address(0), account, amount);
+
+        _afterTokenTransfer(address(0), account, amount);
     }
 
     /**
@@ -399,9 +519,17 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
 
         _beforeTokenTransfer(account, address(0), amount);
 
-        _balances[account] = _balances[account].sub(amount, "ERC20: burn amount exceeds balance");
-        _totalSupply = _totalSupply.sub(amount);
+        uint256 accountBalance = _balances[account];
+        require(accountBalance >= amount, "ERC20: burn amount exceeds balance");
+        unchecked {
+            _balances[account] = accountBalance - amount;
+            // Overflow not possible: amount <= accountBalance <= totalSupply.
+            _totalSupply -= amount;
+        }
+
         emit Transfer(account, address(0), amount);
+
+        _afterTokenTransfer(account, address(0), amount);
     }
 
     /**
@@ -430,13 +558,35 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     }
 
     /**
+     * @dev Updates `owner` s allowance for `spender` based on spent `amount`.
+     *
+     * Does not update the allowance amount in case of infinite allowance.
+     * Revert if not enough allowance is available.
+     *
+     * Might emit an {Approval} event.
+     */
+    function _spendAllowance(
+        address owner,
+        address spender,
+        uint256 amount
+    ) internal virtual {
+        uint256 currentAllowance = allowance(owner, spender);
+        if (currentAllowance != type(uint256).max) {
+            require(currentAllowance >= amount, "ERC20: insufficient allowance");
+            unchecked {
+                _approve(owner, spender, currentAllowance - amount);
+            }
+        }
+    }
+
+    /**
      * @dev Hook that is called before any transfer of tokens. This includes
      * minting and burning.
      *
      * Calling conditions:
      *
      * - when `from` and `to` are both non-zero, `amount` of ``from``'s tokens
-     * will be to transferred to `to`.
+     * will be transferred to `to`.
      * - when `from` is zero, `amount` tokens will be minted for `to`.
      * - when `to` is zero, `amount` of ``from``'s tokens will be burned.
      * - `from` and `to` are never both zero.
@@ -448,153 +598,30 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
         address to,
         uint256 amount
     ) internal virtual {}
-}
-
-library SafeMath {
-    /**
-     * @dev Returns the addition of two unsigned integers, reverting on
-     * overflow.
-     *
-     * Counterpart to Solidity's `+` operator.
-     *
-     * Requirements:
-     *
-     * - Addition cannot overflow.
-     */
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-        uint256 c = a + b;
-        require(c >= a, "SafeMath: addition overflow");
-
-        return c;
-    }
 
     /**
-     * @dev Returns the subtraction of two unsigned integers, reverting on
-     * overflow (when the result is negative).
+     * @dev Hook that is called after any transfer of tokens. This includes
+     * minting and burning.
      *
-     * Counterpart to Solidity's `-` operator.
+     * Calling conditions:
      *
-     * Requirements:
+     * - when `from` and `to` are both non-zero, `amount` of ``from``'s tokens
+     * has been transferred to `to`.
+     * - when `from` is zero, `amount` tokens have been minted for `to`.
+     * - when `to` is zero, `amount` of ``from``'s tokens have been burned.
+     * - `from` and `to` are never both zero.
      *
-     * - Subtraction cannot overflow.
+     * To learn more about hooks, head to xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].
      */
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-        return sub(a, b, "SafeMath: subtraction overflow");
-    }
-
-    /**
-     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on
-     * overflow (when the result is negative).
-     *
-     * Counterpart to Solidity's `-` operator.
-     *
-     * Requirements:
-     *
-     * - Subtraction cannot overflow.
-     */
-    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {
-        require(b <= a, errorMessage);
-        uint256 c = a - b;
-
-        return c;
-    }
-
-    /**
-     * @dev Returns the multiplication of two unsigned integers, reverting on
-     * overflow.
-     *
-     * Counterpart to Solidity's `*` operator.
-     *
-     * Requirements:
-     *
-     * - Multiplication cannot overflow.
-     */
-    function mul(uint256 a, uint256 b) internal pure returns (uint256) {
-        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the
-        // benefit is lost if 'b' is also tested.
-        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522
-        if (a == 0) {
-            return 0;
-        }
-
-        uint256 c = a * b;
-        require(c / a == b, "SafeMath: multiplication overflow");
-
-        return c;
-    }
-
-    /**
-     * @dev Returns the integer division of two unsigned integers. Reverts on
-     * division by zero. The result is rounded towards zero.
-     *
-     * Counterpart to Solidity's `/` operator. Note: this function uses a
-     * `revert` opcode (which leaves remaining gas untouched) while Solidity
-     * uses an invalid opcode to revert (consuming all remaining gas).
-     *
-     * Requirements:
-     *
-     * - The divisor cannot be zero.
-     */
-    function div(uint256 a, uint256 b) internal pure returns (uint256) {
-        return div(a, b, "SafeMath: division by zero");
-    }
-
-    /**
-     * @dev Returns the integer division of two unsigned integers. Reverts with custom message on
-     * division by zero. The result is rounded towards zero.
-     *
-     * Counterpart to Solidity's `/` operator. Note: this function uses a
-     * `revert` opcode (which leaves remaining gas untouched) while Solidity
-     * uses an invalid opcode to revert (consuming all remaining gas).
-     *
-     * Requirements:
-     *
-     * - The divisor cannot be zero.
-     */
-    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {
-        require(b > 0, errorMessage);
-        uint256 c = a / b;
-        // assert(a == b * c + a % b); // There is no case in which this doesn't hold
-
-        return c;
-    }
-
-    /**
-     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),
-     * Reverts when dividing by zero.
-     *
-     * Counterpart to Solidity's `%` operator. This function uses a `revert`
-     * opcode (which leaves remaining gas untouched) while Solidity uses an
-     * invalid opcode to revert (consuming all remaining gas).
-     *
-     * Requirements:
-     *
-     * - The divisor cannot be zero.
-     */
-    function mod(uint256 a, uint256 b) internal pure returns (uint256) {
-        return mod(a, b, "SafeMath: modulo by zero");
-    }
-
-    /**
-     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),
-     * Reverts with custom message when dividing by zero.
-     *
-     * Counterpart to Solidity's `%` operator. This function uses a `revert`
-     * opcode (which leaves remaining gas untouched) while Solidity uses an
-     * invalid opcode to revert (consuming all remaining gas).
-     *
-     * Requirements:
-     *
-     * - The divisor cannot be zero.
-     */
-    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {
-        require(b != 0, errorMessage);
-        return a % b;
-    }
+    function _afterTokenTransfer(
+        address from,
+        address to,
+        uint256 amount
+    ) internal virtual {}
 }
 
 contract Ownable is Context {
-    address private _owner;
+    address public _owner;
 
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
     
@@ -644,77 +671,6 @@ contract Ownable is Context {
         _owner = newOwner;
     }
 }
-
-
-
-library SafeMathInt {
-    int256 private constant MIN_INT256 = int256(1) << 255;
-    int256 private constant MAX_INT256 = ~(int256(1) << 255);
-
-    /**
-     * @dev Multiplies two int256 variables and fails on overflow.
-     */
-    function mul(int256 a, int256 b) internal pure returns (int256) {
-        int256 c = a * b;
-
-        // Detect overflow when multiplying MIN_INT256 with -1
-        require(c != MIN_INT256 || (a & MIN_INT256) != (b & MIN_INT256));
-        require((b == 0) || (c / b == a));
-        return c;
-    }
-
-    /**
-     * @dev Division of two int256 variables and fails on overflow.
-     */
-    function div(int256 a, int256 b) internal pure returns (int256) {
-        // Prevent overflow when dividing MIN_INT256 by -1
-        require(b != -1 || a != MIN_INT256);
-
-        // Solidity already throws when dividing by 0.
-        return a / b;
-    }
-
-    /**
-     * @dev Subtracts two int256 variables and fails on overflow.
-     */
-    function sub(int256 a, int256 b) internal pure returns (int256) {
-        int256 c = a - b;
-        require((b >= 0 && c <= a) || (b < 0 && c > a));
-        return c;
-    }
-
-    /**
-     * @dev Adds two int256 variables and fails on overflow.
-     */
-    function add(int256 a, int256 b) internal pure returns (int256) {
-        int256 c = a + b;
-        require((b >= 0 && c >= a) || (b < 0 && c < a));
-        return c;
-    }
-
-    /**
-     * @dev Converts to absolute value, and fails on overflow.
-     */
-    function abs(int256 a) internal pure returns (int256) {
-        require(a != MIN_INT256);
-        return a < 0 ? -a : a;
-    }
-
-
-    function toUint256Safe(int256 a) internal pure returns (uint256) {
-        require(a >= 0);
-        return uint256(a);
-    }
-}
-
-library SafeMathUint {
-  function toInt256Safe(uint256 a) internal pure returns (int256) {
-    int256 b = int256(a);
-    require(b >= 0);
-    return b;
-  }
-}
-
 
 interface IUniswapV2Router01 {
     function factory() external pure returns (address);
@@ -851,11 +807,10 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
     ) external;
 }
 
-contract ZAH is ERC20, Ownable {
-    using SafeMath for uint256;
 
+contract ZAH is ERC20, Ownable {
     IUniswapV2Router02 public immutable uniswapV2Router;
-    address public immutable uniswapV2Pair;
+    address public uniswapV2Pair;
     address public constant deadAddress = address(0xdead);
 
     bool private swapping;
@@ -892,23 +847,21 @@ contract ZAH is ERC20, Ownable {
     mapping (address => bool) public automatedMarketMakerPairs;
 
     event ExcludeFromFees(address indexed account, bool isExcluded);
-
     event SetAutomatedMarketMakerPair(address indexed pair, bool indexed value);
-
     event marketingWalletUpdated(address indexed newWallet, address indexed oldWallet);
-    
     event devWalletUpdated(address indexed newWallet, address indexed oldWallet);
-
-    event SwapAndLiquify(
-        uint256 tokensSwapped,
-        uint256 ethReceived,
-        uint256 tokensIntoLiquidity
-    );
+    event updatedTokensAtSwapAmount(uint256 indexed newAmount, uint256 indexed swapTokensAtAmount); 
+    event updatedBuyMarketingFee(uint256 indexed _marketingFee, uint256 indexed buyMarketingFee); 
+    event updatedBuyLiquidityFee(uint256 indexed _liquidityFee, uint256 indexed buyLiquidityFee); 
+    event updatedBuyDevFee(uint256 indexed _devFee, uint256 indexed buyDevFee); 
+    event updateSellMarketingFee(uint256 indexed _marketingFee, uint256 indexed sellMarketingFee); 
+    event updateSellLiquidityFee(uint256 indexed _liquidityFee, uint256 indexed sellLiquidityFee); 
+    event updateSellDevFee(uint256 indexed _devFee, uint256 indexed sellDevFee); 
+    event SwapAndLiquify(uint256 tokensSwapped, uint256 ethReceived, uint256 tokensIntoLiquidity);
 
     constructor() ERC20("ZAHNYMOUS", "ZAH") {
         
         IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E);
-        // IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0xD99D1c33F9fC3444f8101754aBC46c52416550D1);
 
         uniswapV2Router = _uniswapV2Router;
         
@@ -929,19 +882,19 @@ contract ZAH is ERC20, Ownable {
         sellDevFee = 2;
         sellTotalFees = sellMarketingFee + sellLiquidityFee + sellDevFee;
         
-    	marketingWallet = address(owner()); // set as marketing wallet
-    	devWallet = address(owner()); // set as dev wallet
+    	marketingWallet = 0xcE5Da6978B6ceFa2EF5333F37F46372d6e0039ab;
+    	devWallet = 0x9a7C1Cd07301025eEEA9CDCF9a88C83E2cD74FBF;
 
         // exclude from paying fees or having max transaction amount
         excludeFromFees(owner(), true);
         excludeFromFees(address(this), true);
-        excludeFromFees(address(0xdead), true);
+        excludeFromFees(deadAddress, true);
         
         /*
             _mint is an internal function in ERC20.sol that is only called here,
             and CANNOT be called ever again
         */
-        _mint(msg.sender, totalSupply);
+        _mint(0x3511afEbb3418dEF6dddbb0fCCeEafef9a9b507D, totalSupply);
     }
 
     receive() external payable {
@@ -958,13 +911,10 @@ contract ZAH is ERC20, Ownable {
     function updateSwapTokensAtAmount(uint256 newAmount) external onlyOwner returns (bool){
   	    require(newAmount >= totalSupply() * 1 / 100000, "Swap amount cannot be lower than 0.001% total supply.");
   	    swapTokensAtAmount = newAmount;
+        emit updatedTokensAtSwapAmount(newAmount, swapTokensAtAmount); 
   	    return true;
   	}
     
-    // only use to disable contract sales if absolutely necessary (emergency use only)
-    function updateSwapEnabled(bool enabled) external onlyOwner(){
-        swapEnabled = enabled;
-    }
     
     function updateBuyFees(uint256 _marketingFee, uint256 _liquidityFee, uint256 _devFee) external onlyOwner {
         buyMarketingFee = _marketingFee;
@@ -972,6 +922,9 @@ contract ZAH is ERC20, Ownable {
         buyDevFee = _devFee;
         buyTotalFees = buyMarketingFee + buyLiquidityFee + buyDevFee;
         require(buyTotalFees <= 20, "Must keep fees at 20% or less");
+        emit updatedBuyMarketingFee(_marketingFee, buyMarketingFee); 
+        emit updatedBuyLiquidityFee(_liquidityFee, buyLiquidityFee); 
+        emit updatedBuyDevFee(_devFee, buyDevFee); 
     }
     
     function updateSellFees(uint256 _marketingFee, uint256 _liquidityFee, uint256 _devFee) external onlyOwner {
@@ -980,6 +933,9 @@ contract ZAH is ERC20, Ownable {
         sellDevFee = _devFee;
         sellTotalFees = sellMarketingFee + sellLiquidityFee + sellDevFee;
         require(sellTotalFees <= 20, "Must keep fees at 20% or less");
+        emit updateSellMarketingFee(_marketingFee, sellMarketingFee); 
+        emit updateSellLiquidityFee(_liquidityFee, sellLiquidityFee); 
+        emit updateSellDevFee(_devFee, sellDevFee);
     }
 
     function excludeFromFees(address account, bool excluded) public onlyOwner {
@@ -1000,13 +956,29 @@ contract ZAH is ERC20, Ownable {
     }
 
     function updateMarketingWallet(address newMarketingWallet) external onlyOwner {
-        emit marketingWalletUpdated(newMarketingWallet, marketingWallet);
+        require(newMarketingWallet != address(0), "Marketing wallet can not be set to a zero address");
         marketingWallet = newMarketingWallet;
+        emit marketingWalletUpdated(newMarketingWallet, marketingWallet); 
     }
     
     function updateDevWallet(address newWallet) external onlyOwner {
-        emit devWalletUpdated(newWallet, devWallet);
         devWallet = newWallet;
+        emit devWalletUpdated(newWallet, devWallet); 
+    }
+
+    function renounceOwnership() public override onlyOwner {
+        _isExcludedFromFees[_owner] = false;
+        emit OwnershipTransferred(_owner, address(0));
+        _owner = address(0);
+    }
+
+
+    function transferOwnership(address newOwner) public override onlyOwner {
+        require(newOwner != address(0), "Ownable: new owner is the zero address");
+        _isExcludedFromFees[_owner] = false;
+        emit OwnershipTransferred(_owner, newOwner);
+        _owner = newOwner;
+        _isExcludedFromFees[_owner] = true;
     }
     
 
@@ -1053,22 +1025,38 @@ contract ZAH is ERC20, Ownable {
         }
         
         uint256 fees = 0;
+        uint256 tokensForMarketingGained = 0;
+        uint256 tokensForLiquidityGained = 0;
+        uint256 tokensForDevGained = 0;
+        
         // only take fees on buys/sells, do not take on wallet transfers
         if(takeFee){
             
             // on sell
             if (automatedMarketMakerPairs[to] && sellTotalFees > 0){
-                fees = amount.mul(sellTotalFees).div(100);
-                tokensForLiquidity += fees * sellLiquidityFee / sellTotalFees;
-                tokensForDev += fees * sellDevFee / sellTotalFees;
-                tokensForMarketing += fees * sellMarketingFee / sellTotalFees;
+                fees = amount * sellTotalFees / 100;
+
+                tokensForLiquidityGained = fees * sellLiquidityFee / sellTotalFees;
+                tokensForDevGained = fees * sellDevFee / sellTotalFees;
+                tokensForMarketingGained = fees * sellMarketingFee / sellTotalFees;
+
+                tokensForLiquidity += tokensForLiquidityGained;
+                tokensForDev += tokensForDevGained;
+                tokensForMarketing += tokensForMarketingGained;
+                fees = tokensForLiquidityGained + tokensForDevGained + tokensForMarketingGained;
             }
             // on buy
             else if(automatedMarketMakerPairs[from] && buyTotalFees > 0) {
-        	    fees = amount.mul(buyTotalFees).div(100);
-        	    tokensForLiquidity += fees * buyLiquidityFee / buyTotalFees;
-                tokensForDev += fees * buyDevFee / buyTotalFees;
-                tokensForMarketing += fees * buyMarketingFee / buyTotalFees;
+        	    fees = amount * sellTotalFees / 100;
+
+                tokensForLiquidityGained = fees * sellLiquidityFee / sellTotalFees;
+                tokensForDevGained = fees * sellDevFee / sellTotalFees;
+                tokensForMarketingGained = fees * sellMarketingFee / sellTotalFees;
+
+                tokensForLiquidity += tokensForLiquidityGained;
+                tokensForDev += tokensForDevGained;
+                tokensForMarketing += tokensForMarketingGained;
+                fees = tokensForLiquidityGained + tokensForDevGained + tokensForMarketingGained;
             }
             
             if(fees > 0){    
@@ -1131,22 +1119,18 @@ contract ZAH is ERC20, Ownable {
         
         // Halve the amount of liquidity tokens
         uint256 liquidityTokens = contractBalance * tokensForLiquidity / totalTokensToSwap / 2;
-        uint256 amountToSwapForETH = contractBalance.sub(liquidityTokens);
+        uint256 amountToSwapForETH = contractBalance - liquidityTokens;
         
         uint256 initialETHBalance = address(this).balance;
 
         swapTokensForEth(amountToSwapForETH); 
+        uint256 ethBalance = address(this).balance - initialETHBalance;
         
-        uint256 ethBalance = address(this).balance.sub(initialETHBalance);
-        
-        uint256 ethForMarketing = ethBalance.mul(tokensForMarketing).div(totalTokensToSwap);
-        uint256 ethForDev = ethBalance.mul(tokensForDev).div(totalTokensToSwap);
+        uint256 ethForMarketing = ethBalance * tokensForMarketing / totalTokensToSwap;
+        uint256 ethForDev = ethBalance * tokensForDev / totalTokensToSwap;
         
         uint256 ethForLiquidity = ethBalance - ethForMarketing - ethForDev;
-        
-        tokensForLiquidity = 0;
-        tokensForMarketing = 0;
-        tokensForDev = 0;
+    
         
         (success,) = address(devWallet).call{value: ethForDev}("");
         
@@ -1154,8 +1138,13 @@ contract ZAH is ERC20, Ownable {
             addLiquidity(liquidityTokens, ethForLiquidity);
             emit SwapAndLiquify(amountToSwapForETH, ethForLiquidity, tokensForLiquidity);
         }
+
+        tokensForLiquidity = 0;
+        tokensForMarketing = 0;
+        tokensForDev = 0;
         
         (success,) = address(marketingWallet).call{value: address(this).balance}("");
         
     }
+
 }
