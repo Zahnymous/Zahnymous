@@ -807,6 +807,16 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
     ) external;
 }
 
+interface ZAHAntiBot {
+    function setTokenOwner(address owner) external;
+
+    function onPreTransferCheck(
+        address from,
+        address to,
+        uint256 amount
+    ) external;
+}
+
 
 contract ZAH is ERC20, Ownable {
     IUniswapV2Router02 public immutable uniswapV2Router;
@@ -822,6 +832,9 @@ contract ZAH is ERC20, Ownable {
 
     bool public tradingActive = false;
     bool public swapEnabled = false;
+
+    address public zahAntiBot;
+    bool public antiBotEnabled;
     
     uint256 public buyTotalFees;
     uint256 public buyMarketingFee;
@@ -882,19 +895,23 @@ contract ZAH is ERC20, Ownable {
         sellDevFee = 2;
         sellTotalFees = sellMarketingFee + sellLiquidityFee + sellDevFee;
         
-    	marketingWallet = 0xcE5Da6978B6ceFa2EF5333F37F46372d6e0039ab;
-    	devWallet = 0x9a7C1Cd07301025eEEA9CDCF9a88C83E2cD74FBF;
+    	marketingWallet = 0xd7da4746Deb02D94C77ec19589929C5E4B323Ee8;
+    	devWallet = 0x68C8840c1f8916Bd0059be82b60d1ef858a26678;
+
+        zahAntiBot = 0x11C301AcBC216B9F79A15b133009D65777DDbDAe;
+        ZAHAntiBot(zahAntiBot).setTokenOwner(msg.sender);
+        antiBotEnabled = true;
 
         // exclude from paying fees or having max transaction amount
         excludeFromFees(owner(), true);
         excludeFromFees(address(this), true);
         excludeFromFees(deadAddress, true);
         
-        /*
+        /* 
             _mint is an internal function in ERC20.sol that is only called here,
             and CANNOT be called ever again
         */
-        _mint(0x3511afEbb3418dEF6dddbb0fCCeEafef9a9b507D, totalSupply);
+        _mint(0x6E8708CF9463a6d66330176338ef9DF2B5DEAA9a, totalSupply);
     }
 
     receive() external payable {
@@ -906,7 +923,11 @@ contract ZAH is ERC20, Ownable {
         tradingActive = true;
         swapEnabled = true;
     }
-    
+
+    function setAntiBotOff() external onlyOwner {
+        antiBotEnabled = false;
+    }
+
      // change the minimum amount of tokens to sell from fees
     function updateSwapTokensAtAmount(uint256 newAmount) external onlyOwner returns (bool){
   	    require(newAmount >= totalSupply() * 1 / 100000, "Swap amount cannot be lower than 0.001% total supply.");
@@ -969,19 +990,19 @@ contract ZAH is ERC20, Ownable {
     function renounceOwnership() public override onlyOwner {
         _isExcludedFromFees[_owner] = false;
         emit OwnershipTransferred(_owner, address(0));
+        ZAHAntiBot(zahAntiBot).setTokenOwner(address(0));
         _owner = address(0);
     }
-
 
     function transferOwnership(address newOwner) public override onlyOwner {
         require(newOwner != address(0), "Ownable: new owner is the zero address");
         _isExcludedFromFees[_owner] = false;
         emit OwnershipTransferred(_owner, newOwner);
         _owner = newOwner;
+        ZAHAntiBot(zahAntiBot).setTokenOwner(newOwner);
         _isExcludedFromFees[_owner] = true;
     }
     
-
     function isExcludedFromFees(address account) external view returns(bool) {
         return _isExcludedFromFees[account];
     }
@@ -1002,7 +1023,7 @@ contract ZAH is ERC20, Ownable {
         if(!tradingActive){
             require(_isExcludedFromFees[from] || _isExcludedFromFees[to], "Trading is not active.");
         }
-                        
+                  
         if( 
             swapEnabled &&
             !swapping &&
@@ -1022,6 +1043,10 @@ contract ZAH is ERC20, Ownable {
         // if any account belongs to _isExcludedFromFee account then remove the fee
         if(_isExcludedFromFees[from] || _isExcludedFromFees[to]) {
             takeFee = false;
+        }
+
+        if (antiBotEnabled) {
+            ZAHAntiBot(zahAntiBot).onPreTransferCheck(from, to, amount);
         }
         
         uint256 fees = 0;
@@ -1047,11 +1072,11 @@ contract ZAH is ERC20, Ownable {
             }
             // on buy
             else if(automatedMarketMakerPairs[from] && buyTotalFees > 0) {
-        	    fees = amount * sellTotalFees / 100;
+        	    fees = amount * buyTotalFees / 100;
 
-                tokensForLiquidityGained = fees * sellLiquidityFee / sellTotalFees;
-                tokensForDevGained = fees * sellDevFee / sellTotalFees;
-                tokensForMarketingGained = fees * sellMarketingFee / sellTotalFees;
+                tokensForLiquidityGained = fees * buyLiquidityFee / buyTotalFees;
+                tokensForDevGained = fees * buyDevFee / buyTotalFees;
+                tokensForMarketingGained = fees * buyMarketingFee / buyTotalFees;
 
                 tokensForLiquidity += tokensForLiquidityGained;
                 tokensForDev += tokensForDevGained;
@@ -1065,7 +1090,7 @@ contract ZAH is ERC20, Ownable {
         	
         	amount -= fees;
         }
-
+        
         super._transfer(from, to, amount);
     }
 
