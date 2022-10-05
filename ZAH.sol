@@ -931,32 +931,32 @@ contract ZAH is ERC20, Ownable {
      // change the minimum amount of tokens to sell from fees
     function updateSwapTokensAtAmount(uint256 newAmount) external onlyOwner returns (bool){
   	    require(newAmount >= totalSupply() * 1 / 100000, "Swap amount cannot be lower than 0.001% total supply.");
-  	    swapTokensAtAmount = newAmount;
-        emit updatedTokensAtSwapAmount(newAmount, swapTokensAtAmount); 
+	    emit updatedTokensAtSwapAmount(newAmount, swapTokensAtAmount);
+  	    swapTokensAtAmount = newAmount; 
   	    return true;
   	}
     
     
     function updateBuyFees(uint256 _marketingFee, uint256 _liquidityFee, uint256 _devFee) external onlyOwner {
+	emit updatedBuyMarketingFee(_marketingFee, buyMarketingFee); 
+        emit updatedBuyLiquidityFee(_liquidityFee, buyLiquidityFee); 
+        emit updatedBuyDevFee(_devFee, buyDevFee); 
         buyMarketingFee = _marketingFee;
         buyLiquidityFee = _liquidityFee;
         buyDevFee = _devFee;
         buyTotalFees = buyMarketingFee + buyLiquidityFee + buyDevFee;
-        require(buyTotalFees <= 20, "Must keep fees at 20% or less");
-        emit updatedBuyMarketingFee(_marketingFee, buyMarketingFee); 
-        emit updatedBuyLiquidityFee(_liquidityFee, buyLiquidityFee); 
-        emit updatedBuyDevFee(_devFee, buyDevFee); 
+        require(buyTotalFees <= 20, "Must keep fees at 20% or less")
     }
     
     function updateSellFees(uint256 _marketingFee, uint256 _liquidityFee, uint256 _devFee) external onlyOwner {
+        emit updateSellMarketingFee(_marketingFee, sellMarketingFee); 
+        emit updateSellLiquidityFee(_liquidityFee, sellLiquidityFee); 
+        emit updateSellDevFee(_devFee, sellDevFee);
         sellMarketingFee = _marketingFee;
         sellLiquidityFee = _liquidityFee;
         sellDevFee = _devFee;
         sellTotalFees = sellMarketingFee + sellLiquidityFee + sellDevFee;
         require(sellTotalFees <= 20, "Must keep fees at 20% or less");
-        emit updateSellMarketingFee(_marketingFee, sellMarketingFee); 
-        emit updateSellLiquidityFee(_liquidityFee, sellLiquidityFee); 
-        emit updateSellDevFee(_devFee, sellDevFee);
     }
 
     function excludeFromFees(address account, bool excluded) public onlyOwner {
@@ -978,13 +978,13 @@ contract ZAH is ERC20, Ownable {
 
     function updateMarketingWallet(address newMarketingWallet) external onlyOwner {
         require(newMarketingWallet != address(0), "Marketing wallet can not be set to a zero address");
-        marketingWallet = newMarketingWallet;
-        emit marketingWalletUpdated(newMarketingWallet, marketingWallet); 
+	emit marketingWalletUpdated(newMarketingWallet, marketingWallet);
+        marketingWallet = newMarketingWallet; 
     }
     
     function updateDevWallet(address newWallet) external onlyOwner {
-        devWallet = newWallet;
         emit devWalletUpdated(newWallet, devWallet); 
+	devWallet = newWallet;
     }
 
     function renounceOwnership() public override onlyOwner {
@@ -1090,7 +1090,7 @@ contract ZAH is ERC20, Ownable {
         	
         	amount -= fees;
         }
-        
+
         super._transfer(from, to, amount);
     }
 
